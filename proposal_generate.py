@@ -27,7 +27,8 @@ client_id = st.secrets["CLIENT_ID"]
 client_secret = st.secrets["CLIENT_SECRET"]
 tenant_id = st.secrets["TENANT_ID"]
 authority = f"https://login.microsoftonline.com/{tenant_id}"
-redirect_uri = "http://localhost:8504/"  # Adjust for your environment
+redirect_uri = "https://proposal-generate.streamlit.app/" #Prod
+#redirect_uri = "http://localhost:8504/"  # Dev
 
 app = ConfidentialClientApplication(client_id, authority=authority, client_credential=client_secret)
 
